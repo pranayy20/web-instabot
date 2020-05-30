@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Simple HTML Document</title>
+<style type="text/css">
+    body {
+        font-family: Zapf-Chanceryf;
+        background-color: powderblue;
+    }
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="getlist({{output}})">
+    <br>
+    <br>
+    <br>
+    <br>
+    <center><img src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/04/instagram-logo-796x398.png" alt="instagram" width="240" height="120">
+    <form action="/" method="POST">
+        <center><h4>Username <input type="text" name="Username" required></h4>
+        <center><h4>Password <input type="password" name="Password" required></h4>
+            <center><button> Submit </button>
+    </form>
+        <br>
+          <center><h2>Instagram unfollower checklist</h2>
+              <table id="my" border="1">
+                  <tr>
+                      <th>
+                          Username's
+                      </th>
+                  </tr>
+              </table>
+                  <script>
+                   function getlist(array){
+                        array.forEach(function(item) {
+                        var tr = document.createElement("tr");
+                        var text = document.createTextNode(item);
+                        tr.appendChild(text);
+                        document.getElementById("my").appendChild(tr);
+                        });
+                    }
+                  </script>
+</body>
+</html>
